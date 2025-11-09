@@ -9,11 +9,11 @@ cd "$SCRIPT_DIR"
 echo "===== 欧加真SM8650通用6.1.118 A15 OKI内核本地编译脚本 By Coolapk@cctv18 ====="
 echo ">>> 读取用户配置..."
 MANIFEST=${MANIFEST:-oppo+oplus+realme}
-read -p "请输入自定义内核后缀（默认：android14-11-o-gca13bffobf09）: " CUSTOM_SUFFIX
+read -p "外挂内核（默认：android14-11-o-gca13bffobf09）: " CUSTOM_SUFFIX
 CUSTOM_SUFFIX=${CUSTOM_SUFFIX:-android14-11-o-gca13bffobf09}
-read -p "是否启用 KPM？(y/n，默认：n): " USE_PATCH_LINUX
+read -p "是否启用 KPM（开挂必备）？(y/n，默认：n): " USE_PATCH_LINUX
 USE_PATCH_LINUX=${USE_PATCH_LINUX:-n}
-read -p "KSU分支版本(y=SukiSU Ultra, n=KernelSU Next, 默认：y): " KSU_BRANCH
+read -p "KSU分支版本(y=SukiSU Ultra（开挂神器）, n=KernelSU Next, 默认：y): " KSU_BRANCH
 KSU_BRANCH=${KSU_BRANCH:-y}
 read -p "应用钩子类型 (manual/syscall/kprobes, m/s/k, 默认m): " APPLY_HOOKS
 APPLY_HOOKS=${APPLY_HOOKS:-m}
@@ -41,9 +41,9 @@ fi
 echo
 echo "===== 配置信息 ====="
 echo "适用机型: $MANIFEST"
-echo "自定义内核后缀: -$CUSTOM_SUFFIX"
+echo "外挂内核: -$CUSTOM_SUFFIX"
 echo "KSU分支版本: $KSU_TYPE"
-echo "启用 KPM: $USE_PATCH_LINUX"
+echo "启用 KPM（外挂必备）: $USE_PATCH_LINUX"
 echo "钩子类型: $APPLY_HOOKS"
 echo "应用 lz4&zstd 补丁: $APPLY_LZ4"
 echo "应用 lz4kd 补丁: $APPLY_LZ4KD"
